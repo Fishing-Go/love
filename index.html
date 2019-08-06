@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>执"鱼"之手，与"时"偕老</title>
+<style type="text/css">
+@font-face {
+	font-family: digit;
+	src: url('digital-7_mono.ttf') format("truetype");
+}
+</style>
+
+<link href="default.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="garden.js"></script>
+<script type="text/javascript" src="functions.js"></script>
+
+</head>
+
+<body>
+
+<div id="mainDiv">
+	<div id="content">
+		<div id="code">
+		    男孩： <span class="keyword">小蛐蛐</span><br />
+			女孩： <span class="keyword">小鱼鱼</span><br />
+			<br />
+			<span class="space"/><span class="comments">2011年的盛夏，我遇见了你</span><br />
+			<span class="space"/><span class="comments">2011年9月4日:</span><span class="keyword">Kissing And Confession</span><br />
+			<span class="space"/><span class="comments">2016年5月1日:</span><span class="keyword">小鱼鱼领着小蛐蛐见家长啦</span><br />
+			<span class="space"/><span class="comments">2016年12月24日:</span><span class="keyword">我们订婚啰...</span><br />
+			<span class="space"/><span class="comments">2017年12月24日:</span><span class="keyword">小蛐蛐向小鱼鱼求婚啦...</span><br />
+			<span class="space"/><span class="comments">2018年2月04日:</span><span class="keyword">我们结婚啦</span><br />
+			<span class="placeholder"/><span class="comments">现在我们正在准备着迎接我们小宝宝的到来</span><br />
+			<span class="space"/><span class="comments"></span><br />
+			<span class="comments">时间 </span><br />
+			让遇见静止<br />
+			<span class="comments">时间 </span><br />
+			让激情回归平淡<br />
+			<span class="comments">时间 </span><br />
+			记录着我们幸福的每一刻<br />
+			<span class="keyword">相遇</span><br />
+			<span class="keyword">相识</span><br />
+			<span class="keyword">相知</span><br />
+			<span class="keyword">相爱</span><br />
+			<span class="keyword">相守</span><br />
+			执<span class="keyword">鱼</span>之手，与<span class="keyword">时</span>偕老<br />
+			<span class="keyword">『鱼时』</span>俱进，相守<span class="keyword">幸福</span><br />
+			宝宝<br />
+			<span class="keyword">健康</span><br />
+			<span class="keyword">平安</span><br />
+			<span class="keyword">幸福</span><br />
+			<span class="keyword">快乐</span><br />
+			<br>
+			<br>
+			我想说:<br />
+			老婆，谢谢你<br />
+			老婆，辛苦了<br />
+			老婆，我爱你<br />
+		</div>
+		<div id="loveHeart">
+			<canvas id="garden"></canvas>
+			<div id="words">
+				<div id="messages">
+					亲爱的老婆，这是我们相爱在一起的时光。
+					<div id="elapseClock"></div>
+				</div>
+				<div id="loveu">
+					执"鱼"之手，与"时"偕老<br/>
+				   『鱼时』俱进，相守幸福<br/>
+				   还有我们的小Baby<br/>
+					<div class="signature">- 爱你的老公</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="copyright">
+		<a href="#">....</a><br />
+		<a href="#">....</a><br />
+		
+	</div>
+</div>
+
+<script type="text/javascript">
+var offsetX = $("#loveHeart").width() / 2;
+var offsetY = $("#loveHeart").height() / 2 - 55;
+var together = new Date();
+together.setFullYear(2011, 9, 4);
+together.setHours(0);
+together.setMinutes(0);
+together.setSeconds(0);
+together.setMilliseconds(0);
+
+if (!document.createElement('canvas').getContext) {
+	var msg = document.createElement("div");
+	msg.id = "errorMsg";
+	msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+	document.body.appendChild(msg);
+	$("#code").css("display", "none")
+	$("#copyright").css("position", "absolute");
+	$("#copyright").css("bottom", "10px");
+	document.execCommand("stop");
+} else {
+	setTimeout(function () {
+		startHeartAnimation();
+	}, 5000);
+
+	timeElapse(together);
+	setInterval(function () {
+		timeElapse(together);
+	}, 500);
+
+	adjustCodePosition();
+	$("#code").typewriter();
+}
+</script>
+
+</body>
+</html>
